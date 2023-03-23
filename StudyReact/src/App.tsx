@@ -1,11 +1,6 @@
-import ClassComponent from './ClassComponent'
-import ArrowComponent from './ArrowComponent'
+import P from './P'
 
 export default function App() {
-  return (
-    <ul>
-      <ClassComponent href="http://www.google.com" text="go to Google" />
-      <ArrowComponent href="https://twitter.com" text="go to Twitter" />
-    </ul>
-  )
+  const texts = ['hello', 'world'].map((text, index) => <P key={index} children={text} />)
+  return <div children={texts} />
 }
